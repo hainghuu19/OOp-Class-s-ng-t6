@@ -1,0 +1,9 @@
+Question: If you create a constructor method to build a DVD by title then create a constructor method to build
+a DVD by category. Does JAVA allow you to do this?
+
+Answer: If we do this, Java will notify us that the method (constructor), which indicates that Java has 
+designated it as an error and will prevent the program from running later, has been duplicated. 
+When using the Aims.java file to test these constructors, the outcome is a little bit different. 
+Although a window appeared warning that there were issues with the AimsProject, there was still a choice to 
+launch the satellite. Due to the title constructor having precedence over the category constructor, the "title"
+attribute was filled upon startup while the category was set to null.
