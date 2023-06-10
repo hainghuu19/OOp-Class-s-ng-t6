@@ -1,0 +1,15 @@
+Question 1:
+Cart aggregates Media, Store aggregates Media, Aims aggregates Cart, Aims aggregates Store, Compact Disc aggregates Track 
+Media aggregates MediaComparatorByTitleCost, MediaComparatorByCostTitle;
+Question 2: 
+Each media in the list executes a different toString method because it is dynamic binding which means the called method depends on the objects and not depends on the referrence to the object. In this case, each media refer to different objects of 3 different classes so they have different toString method.
+Question 3:  
+If instance passed in method equals is not Media, we check the instance by method "instanceof" and return false for function equals and print out message that instance is not Media.
+Question 4: - What class should implement the Comparable interface?
+            Ans : Implement Comparable interface in Media class in order to sorting media 
+            - In those classes, how should you implement the compareTo() method be to reflect the ordering that we want?
+            Ans : public class Media implements Comparable<Media>{}
+- Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach?
+Ans : No because Comparable interface is used for internal comparison and can be implemented only once by class Media.
+- Suppose the DVDs has a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?
+Ans : I override compareTo() method in DigitalVideoDisc. 
